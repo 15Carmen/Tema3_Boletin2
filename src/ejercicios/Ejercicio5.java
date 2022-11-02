@@ -11,30 +11,34 @@ public class Ejercicio5 {
 
     public static void main(String[] args) {
         int random;
-        int randomMayor;
         String respuesta;
+        int minimo = 1;
+        int maximo = 100;
 
         Scanner sc = new Scanner(System.in);
 
+
         do {
-            random = (int) (Math.random()*100);
+            random = (int) (Math.random() * (maximo-minimo) + minimo);
 
             System.out.println("Es " + random + " el numero que estas pensando?");
-            respuesta=sc.next();
+            respuesta = sc.next();
 
             if ("mayor".equals(respuesta)) {
 
+                minimo = random + 1;
 
             } else if ("menor".equals(respuesta)) {
-                random = (int) (Math.random() * random);
-            } else{
+
+                maximo = random - 1;
+
+            } else if (!"igual".equals(respuesta)) {
                 System.out.println("Respuesta no valida");
             }
 
-        }while (!respuesta.equals("igual"));
+        } while (!respuesta.equals("igual"));
 
-        System.out.println("Es el número!!!!");
-
+        System.out.println("Bien! He acertado!!");
 
 
     }

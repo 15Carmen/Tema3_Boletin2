@@ -22,9 +22,9 @@ public class Ejercicio3 {
         num = sc.nextInt();
 
         do {
-            suma+=contador;        //Le sumamos a la variable suma i
-            contador++;            //E incrementamos i en 1
-        } while (contador <= num); //Mientras i sea menor o igual que el numero introducido por el usuario
+            suma+=contador;        //Le sumamos a la variable suma contador
+            contador++;            //E incrementamos contador en 1
+        } while (contador <= num); //Mientras contador sea menor o igual que el numero introducido por el usuario
 
         //Imprimimos el resultado de la suma
         System.out.println("La suma de los numeros de 1 a "+num+" es de "+suma);
